@@ -63,7 +63,7 @@ class WebData(object):
             return
         if "captcha" not in r.text:
             return
-        cache_file = dm.get_query_cache_path(url)
+        cache_file = DirectoryManager().get_query_cache_path(url)
         msg = CAPTCHA_MSG % (red_str("ERROR:"), url,
                              chill_green_str(cache_file))
         print(msg)
